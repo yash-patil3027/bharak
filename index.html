@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Raksha | Indian Defence Forces Encyclopedia</title>
+<meta name="description" content="A comprehensive knowledge base on the Indian Army, Navy and Air Force — commands, regiments, equipment, special forces, modernization and recruitment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --navy:#001F54;
+  --navy-deep:#00122f;
+  --red:#C1121F;
+  --red-dim:#7a0d14;
+  --sky:#5DADE2;
+  --khaki:#9a8f6b;
+  --paper:#eef1f4;
+  --ink:#0c1420;
+  --bg:#080d16;
+  --bg-2:#0e1626;
+  --panel:#101b2e;
+  --panel-2:#132038;
+  --line:#22324a;
+  --text:#dfe6ee;
+  --text-dim:#8fa0b5;
+  --text-faint:#5c7185;
+  --radius:2px;
+  --display:'Oswald',sans-serif;
+  --tactical:'Rajdhani',sans-serif;
+  --body:'Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html[data-theme="light"]{
+  --bg:#eef1ea;
+  --bg-2:#e4e8de;
+  --panel:#ffffff;
+  --panel-2:#f4f6f1;
+  --line:#cdd4c4;
+  --text:#101a12;
+  --text-dim:#3f4d40;
+  --text-faint:#748073;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  transition:background .3s ease,color .3s ease;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.container{max-width:1240px;margin:0 auto;padding:0 28px;}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;letter-spacing:.01em;margin:0;}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--sky);
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--red);display:inline-block;}
+:focus-visible{outline:2px solid var(--sky);outline-offset:3px;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important;}}
+
+/* ============ TOPBAR / NAV ============ */
+.topbar{
+  background:var(--navy-deep);
+  color:#b8c4d6;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.05em;
+  padding:6px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+.topbar .mottoline{color:var(--sky);}
+nav.mainnav{
+  position:sticky;top:0;z-index:80;
+  background:rgba(8,13,22,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+html[data-theme="light"] nav.mainnav{background:rgba(238,241,234,.92);}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{height:38px;width:auto;filter:drop-shadow(0 0 6px rgba(93,173,226,.35));}
+.brand .name{font-family:var(--display);font-size:19px;letter-spacing:.03em;}
+.brand .name b{color:var(--red);}
+.brand .tag{font-family:var(--mono);font-size:10px;color:var(--text-faint);letter-spacing:.15em;display:block;margin-top:-2px;}
+.navlinks{display:flex;gap:26px;align-items:center;}
+.navlinks a{
+  font-family:var(--tactical);font-weight:600;font-size:15px;
+  color:var(--text-dim);position:relative;padding:6px 0;
+}
+.navlinks a:hover{color:var(--text);}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--red);transition:width .25s;}
+.navlinks a:hover::after{width:100%;}
+.navtools{display:flex;align-items:center;gap:14px;}
+.iconbtn{
+  background:transparent;border:1px solid var(--line);color:var(--text-dim);
+  width:36px;height:36px;border-radius:var(--radius);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;font-size:15px;
+}
+.iconbtn:hover{border-color:var(--sky);color:var(--sky);}
+.hamburger{display:none;}
+@media (max-width:920px){
+  .navlinks{position:fixed;top:68px;left:0;right:0;background:var(--bg-2);flex-direction:column;
+    padding:18px 28px;gap:2px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .3s;}
+  .navlinks.open{transform:translateY(0);}
+  .navlinks a{padding:12px 0;border-bottom:1px solid var(--line);width:100%;}
+  .hamburger{display:flex;}
+}
+
+/* search overlay */
+.searchwrap{position:relative;}
+#searchBox{
+  background:var(--panel);border:1px solid var(--line);color:var(--text);
+  font-family:var(--body);font-size:13px;padding:8px 12px;width:0;opacity:0;
+  transition:width .25s,opacity .25s;border-radius:var(--radius);
+}
+#searchBox.active{width:220px;opacity:1;}
+#searchResults{
+  position:absolute;top:44px;right:0;width:320px;max-height:380px;overflow:auto;
+  background:var(--panel);border:1px solid var(--line);display:none;box-shadow:0 20px 40px rgba(0,0,0,.4);
+  z-index:100;
+}
+#searchResults.show{display:block;}
+#searchResults a{display:block;padding:10px 14px;border-bottom:1px solid var(--line);font-size:13px;}
+#searchResults a:hover{background:var(--panel-2);color:var(--sky);}
+#searchResults .cat{font-family:var(--mono);font-size:9px;color:var(--text-faint);letter-spacing:.1em;text-transform:uppercase;}
+#searchResults .empty{padding:14px;color:var(--text-faint);font-size:13px;}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;overflow:hidden;
+  min-height:640px;display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(93,173,226,.14), transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(193,18,31,.16), transparent 50%),
+    linear-gradient(180deg,var(--navy-deep) 0%, var(--bg) 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(93,173,226,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(93,173,226,.05) 1px, transparent 1px);
+  background-size:42px 42px;
+  mask-image:radial-gradient(ellipse at 60% 30%, black, transparent 70%);
+}
+.herogrid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative;z-index:2;padding:70px 0;}
+@media (max-width:920px){.herogrid{grid-template-columns:1fr;padding:40px 0;}}
+.hero h1{
+  font-size:clamp(38px,5.4vw,68px);line-height:1.02;color:#fff;
+  text-transform:uppercase;
+}
+.hero h1 .line2{color:var(--sky);}
+.hero p.lede{color:var(--text-dim);font-size:17px;max-width:520px;margin-top:20px;}
+.herobtns{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+.btn{
+  font-family:var(--tactical);font-weight:700;font-size:15px;letter-spacing:.03em;
+  padding:14px 26px;border-radius:var(--radius);cursor:pointer;border:1px solid transparent;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary{background:var(--red);color:#fff;}
+.btn-primary:hover{background:#e0141f;}
+.btn-outline{border-color:var(--sky);color:var(--sky);}
+.btn-outline:hover{background:rgba(93,173,226,.1);}
+.heroemblems{display:flex;gap:22px;margin-top:44px;flex-wrap:wrap;}
+.heroemblems .em{text-align:center;width:84px;}
+.heroemblems img{width:56px;height:56px;object-fit:contain;margin:0 auto 8px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.5));}
+.heroemblems span{font-family:var(--mono);font-size:10px;color:var(--text-faint);letter-spacing:.08em;}
+.heropanel{
+  background:var(--panel);border:1px solid var(--line);padding:26px;position:relative;
+}
+.heropanel::before{content:"LIVE STRENGTH INDEX";position:absolute;top:-11px;left:20px;background:var(--bg);
+  padding:0 8px;font-family:var(--mono);font-size:10px;color:var(--red);letter-spacing:.15em;}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px;}
+.statcell{border-left:2px solid var(--red);padding-left:14px;}
+.statcell .num{font-family:var(--mono);font-size:26px;font-weight:600;color:#fff;}
+.statcell .lab{font-size:12px;color:var(--text-dim);margin-top:2px;}
+.heropanel .src{font-family:var(--mono);font-size:9.5px;color:var(--text-faint);margin-top:18px;}
+
+/* ============ SECTION SHELLS ============ */
+section{padding:86px 0;border-bottom:1px solid var(--line);}
+.sectitle{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px;}
+.sectitle h2{font-size:clamp(28px,3.4vw,42px);text-transform:uppercase;}
+.sectitle p{color:var(--text-dim);max-width:480px;font-size:15px;}
+
+/* branch tabs */
+.branchtabs{display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap;}
+.branchtab{
+  font-family:var(--tactical);font-weight:600;font-size:16px;
+  padding:12px 22px;border:1px solid var(--line);background:var(--panel);color:var(--text-dim);cursor:pointer;
+  display:flex;align-items:center;gap:10px;
+}
+.branchtab img{width:22px;height:22px;object-fit:contain;}
+.branchtab.active{border-color:var(--red);color:#fff;background:var(--panel-2);}
+.branchpanel{display:none;}
+.branchpanel.active{display:block;animation:fade .4s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+.branchintro{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;margin-bottom:44px;align-items:start;}
+@media (max-width:860px){.branchintro{grid-template-columns:1fr;}}
+.branchintro .photo{border:1px solid var(--line);overflow:hidden;}
+.branchintro .photo img{width:100%;height:260px;object-fit:cover;}
+.branchintro .caption{font-family:var(--mono);font-size:10px;color:var(--text-faint);padding:8px 10px;background:var(--panel);}
+
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;}
+.card{
+  background:var(--panel);border:1px solid var(--line);padding:20px;transition:border-color .2s,transform .2s;
+}
+.card:hover{border-color:var(--sky);transform:translateY(-3px);}
+.card h4{font-size:17px;font-family:var(--tactical);font-weight:700;color:#fff;}
+.card .meta{font-family:var(--mono);font-size:10.5px;color:var(--sky);letter-spacing:.06em;margin:6px 0 10px;text-transform:uppercase;}
+.card p{font-size:13.5px;color:var(--text-dim);margin:0;}
+.card .badge{
+  width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:700;color:#fff;margin-bottom:12px;font-size:15px;
+}
+
+.subhead{font-family:var(--tactical);font-weight:700;font-size:21px;color:#fff;margin:52px 0 18px;display:flex;align-items:center;gap:12px;}
+.subhead .n{font-family:var(--mono);font-size:12px;color:var(--red);border:1px solid var(--red-dim);padding:2px 8px;}
+
+/* equipment gallery */
+.equiprow{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+.equipcard{background:var(--panel);border:1px solid var(--line);overflow:hidden;}
+.equipcard .imgwrap{height:170px;overflow:hidden;background:var(--panel-2);}
+.equipcard .imgwrap img{width:100%;height:100%;object-fit:cover;}
+.equipcard .body{padding:16px 18px;}
+.equipcard h4{font-size:16px;color:#fff;font-family:var(--tactical);}
+.equipcard .spec{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;}
+
+/* ============ TIMELINE ============ */
+.timeline{position:relative;margin-top:20px;padding-left:26px;border-left:2px solid var(--line);}
+.tlitem{position:relative;padding-bottom:36px;}
+.tlitem:last-child{padding-bottom:0;}
+.tlitem::before{content:"";position:absolute;left:-32px;top:2px;width:12px;height:12px;background:var(--red);border-radius:50%;box-shadow:0 0 0 4px var(--bg),0 0 0 5px var(--line);}
+.tlitem .yr{font-family:var(--mono);color:var(--sky);font-size:13px;letter-spacing:.05em;}
+.tlitem h4{font-family:var(--tactical);font-size:18px;color:#fff;margin-top:4px;}
+.tlitem p{font-size:13.5px;color:var(--text-dim);margin-top:6px;max-width:640px;}
+
+/* ============ RANKS TABLE ============ */
+.ranktable{width:100%;border-collapse:collapse;font-size:13.5px;}
+.ranktable th{
+  font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--sky);text-align:left;padding:12px;border-bottom:2px solid var(--line);
+}
+.ranktable td{padding:11px 12px;border-bottom:1px solid var(--line);color:var(--text-dim);}
+.ranktable tr:hover td{background:var(--panel-2);color:var(--text);}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);}
+
+/* ============ SPECIAL FORCES ============ */
+.sfgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+@media (max-width:900px){.sfgrid{grid-template-columns:1fr;}}
+.sfcard{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line);padding:26px;position:relative;}
+.sfcard::before{content:attr(data-tag);position:absolute;top:0;right:0;background:var(--red);color:#fff;font-family:var(--mono);font-size:10px;padding:4px 10px;letter-spacing:.1em;}
+.sfcard h3{font-size:23px;color:#fff;margin-bottom:6px;}
+.sfcard .motto{font-style:italic;color:var(--sky);font-size:13px;margin-bottom:14px;}
+.sfcard ul{margin:0;padding-left:18px;color:var(--text-dim);font-size:13.5px;}
+.sfcard li{margin-bottom:6px;}
+
+/* ============ MODERNIZATION ============ */
+.modgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;}
+.modcard{border:1px solid var(--line);background:var(--panel);padding:18px;}
+.modcard .tag{font-family:var(--mono);font-size:10px;color:var(--red);letter-spacing:.08em;}
+.modcard h4{color:#fff;font-size:16px;margin-top:6px;font-family:var(--tactical);}
+.modcard p{font-size:12.5px;color:var(--text-dim);margin-top:6px;}
+
+/* ============ RECRUITMENT ============ */
+.entrygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;}
+.entrycard{background:var(--panel);border:1px solid var(--line);padding:20px;}
+.entrycard h4{color:#fff;font-family:var(--tactical);font-size:18px;}
+.entrycard .row{display:flex;justify-content:space-between;font-size:12.5px;color:var(--text-dim);border-top:1px dashed var(--line);padding:8px 0;}
+.entrycard .row b{color:var(--text);font-weight:600;}
+
+.calcbox{background:var(--panel);border:1px solid var(--sky);padding:28px;margin-top:44px;}
+.calcbox h3{color:#fff;font-size:20px;margin-bottom:16px;}
+.calcform{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:end;}
+@media (max-width:800px){.calcform{grid-template-columns:1fr 1fr;}}
+.calcform label{display:block;font-family:var(--mono);font-size:10.5px;color:var(--text-faint);margin-bottom:6px;letter-spacing:.05em;text-transform:uppercase;}
+.calcform select,.calcform input{
+  width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--text);padding:10px;font-family:var(--body);font-size:14px;
+}
+#calcResult{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--text-dim);}
+#calcResult .hit{color:var(--sky);font-weight:600;}
+
+/* ============ FAQ ============ */
+.faq{max-width:800px;}
+.faqitem{border-bottom:1px solid var(--line);}
+.faqq{padding:18px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:var(--tactical);font-weight:600;font-size:16px;color:#fff;}
+.faqa{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--text-dim);font-size:14px;}
+.faqitem.open .faqa{max-height:200px;padding-bottom:18px;}
+.faqq .plus{font-family:var(--mono);color:var(--red);transition:transform .3s;}
+.faqitem.open .plus{transform:rotate(45deg);}
+
+/* ============ FOOTER ============ */
+footer{background:var(--navy-deep);border-top:1px solid var(--line);padding:60px 0 20px;}
+.footgrid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px;}
+@media (max-width:900px){.footgrid{grid-template-columns:1fr 1fr;}}
+.footgrid h5{font-family:var(--mono);font-size:11px;color:var(--sky);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;}
+.footgrid a{display:block;font-size:13px;color:#a9b6c6;padding:4px 0;}
+.footgrid a:hover{color:#fff;}
+.footbottom{border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:20px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--mono);font-size:11px;color:#7c8ba0;}
+
+.hidden-by-search{display:none !important;}
+::selection{background:var(--red);color:#fff;}
+</style>
+<link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>भारतीय सशस्त्र सेना &nbsp;•&nbsp; Ministry of Defence, Government of India (independent educational resource)</span>
+    <span class="mottoline">"Service Before Self"</span>
+  </div>
+</div>
+
+<nav class="mainnav">
+  <div class="container navrow">
+    <div class="brand">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_the_Indian_Armed_Forces.svg" alt="Emblem of the Indian Armed Forces">
+      <div>
+        <span class="name">BHARAT <b>RAKSHA</b></span>
+        <span class="tag">DEFENCE ENCYCLOPEDIA</span>
+      </div>
+    </div>
+    <div class="navlinks" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#timeline">History</a>
+      <a href="#specialforces">Special Forces</a>
+      <a href="#modernization">Modernization</a>
+      <a href="#ranks">Ranks</a>
+      <a href="#recruitment">Join Us</a>
+      <a href="#faq">FAQ</a>
+      <a href="/entries.html">Entries</a>
+    </div>
+    <div class="navtools">
+      <div class="searchwrap">
+        <input id="searchBox" type="text" placeholder="Search regiments, ships, jets…" oninput="runSearch(this.value)">
+        <div id="searchResults"></div>
+      </div>
+      <button class="iconbtn" onclick="toggleSearchBox()" aria-label="Toggle search">⌕</button>
+      <button class="iconbtn" onclick="toggleTheme()" aria-label="Toggle theme" id="themeBtn">☾</button>
+      <button class="iconbtn hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+<div id="jumpBar"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container herogrid">
+    <div>
+      <div class="eyebrow">INDIAN ARMED FORCES · ARMY / NAVY / AIR FORCE</div>
+      <h1>GUARDIANS OF<br><span class="line2">BHARAT'S FRONTIER</span></h1>
+      <p class="lede">A single reference point for the structure, history, equipment and people of the Indian Army, Navy and Air Force — built for students, defence aspirants, NCC cadets and enthusiasts.</p>
+      <div class="herobtns">
+        <a class="btn btn-primary" href="#services">Explore the Services</a>
+        <a class="btn btn-outline" href="#recruitment">How to Join</a>
+      </div>
+      <div class="heroemblems">
+        <div class="em"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/ADGPI_Indian_Army.svg" alt="Indian Army insignia"><span>ARMY · 1895</span></div>
+        <div class="em"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Navy_Insignia_(2022).svg" alt="Indian Navy insignia"><span>NAVY · 1612</span></div>
+        <div class="em"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/IAF_Emblem.svg" alt="Indian Air Force emblem"><span>AIR FORCE · 1932</span></div>
+      </div>
+    </div>
+    <div class="heropanel">
+      <div class="statgrid">
+        <div class="statcell"><div class="num">14.4L+</div><div class="lab">Active + Reserve Personnel</div></div>
+        <div class="statcell"><div class="num">3</div><div class="lab">Services, 7 Commands (Army)</div></div>
+        <div class="statcell"><div class="num">2</div><div class="lab">Active Aircraft Carriers</div></div>
+        <div class="statcell"><div class="num">21</div><div class="lab">Param Vir Chakra Awardees</div></div>
+        <div class="statcell"><div class="num">1932</div><div class="lab">IAF Founded</div></div>
+        <div class="statcell"><div class="num">₹6.8L Cr</div><div class="lab">FY 2025-26 Defence Outlay</div></div>
+      </div>
+      <div class="src">FIGURES ARE APPROXIMATE, ROUNDED, FOR EDUCATIONAL ORIENTATION ONLY.</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ SERVICES (ARMY / NAVY / AIR FORCE) ============ -->
+<section id="services">
+  <div class="container">
+    <div class="sectitle">
+      <div>
+        <div class="eyebrow">THE THREE SERVICES</div>
+        <h2>Army · Navy · Air Force</h2>
+      </div>
+      <p>Every command, corps and platform is organised so a reader can go from the big picture down to a single regiment or squadron in two clicks.</p>
+    </div>
+
+    <div class="branchtabs">
+      <button class="branchtab active" onclick="showBranch('army',this)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/ADGPI_Indian_Army.svg">Indian Army</button>
+      <button class="branchtab" onclick="showBranch('navy',this)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Navy_Insignia_(2022).svg">Indian Navy</button>
+      <button class="branchtab" onclick="showBranch('airforce',this)"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/IAF_Emblem.svg">Indian Air Force</button>
+    </div>
+
+    <!-- ARMY -->
+    <div class="branchpanel active" id="panel-army">
+      <div class="branchintro">
+        <div>
+          <div class="eyebrow">ESTABLISHED 1895</div>
+          <h3 style="font-size:26px;color:#fff;">The Indian Army</h3>
+          <p style="color:var(--text-dim);margin-top:12px;">The Indian Army is the land warfare branch of the armed forces, one of the largest standing armies in the world. It traces its lineage to the Presidency armies of British India and was reorganised into a unified force after independence in 1947. It is organised into seven operational commands plus the Army Training Command, each responsible for a defined geographic sector, and fields formations ranging from strike corps to mountain divisions built for high-altitude warfare.</p>
+        </div>
+        <div class="photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Army_T-90.jpg" alt="Indian Army T-90 Bhishma main battle tank">
+          <div class="caption">T-90 "Bhishma" main battle tank, Indian Army armoured corps</div>
+        </div>
+      </div>
+
+      <div class="subhead"><span class="n">01</span> Army Commands</div>
+      <div class="cardgrid">
+        <div class="card searchable" data-keywords="northern command army leh srinagar">
+          <div class="badge" style="background:var(--red);">N</div>
+          <h4>Northern Command</h4>
+          <div class="meta">HQ Udhampur</div>
+          <p>Guards Jammu & Kashmir and Ladakh, including the Siachen Glacier and the Line of Control — the Army's most demanding high-altitude theatre.</p>
+        </div>
+        <div class="card searchable" data-keywords="western command army chandimandir punjab">
+          <div class="badge" style="background:var(--navy);border:1px solid var(--sky);">W</div>
+          <h4>Western Command</h4>
+          <div class="meta">HQ Chandimandir</div>
+          <p>Covers Punjab and parts of Rajasthan facing the western international border; home to key strike-corps formations.</p>
+        </div>
+        <div class="card searchable" data-keywords="eastern command army kolkata northeast china border">
+          <div class="badge" style="background:var(--khaki);">E</div>
+          <h4>Eastern Command</h4>
+          <div class="meta">HQ Kolkata</div>
+          <p>Responsible for the entire north-eastern sector and the Line of Actual Control with China across Arunachal Pradesh and Sikkim.</p>
+        </div>
+        <div class="card searchable" data-keywords="southern command army pune peninsula">
+          <div class="badge" style="background:var(--red-dim);">S</div>
+          <h4>Southern Command</h4>
+          <div class="meta">HQ Pune</div>
+          <p>The oldest command, overseeing the peninsular states and coastal defence coordination with the Navy.</p>
+        </div>
+        <div class="card searchable" data-keywords="central command army lucknow">
+          <div class="badge" style="background:var(--sky);color:#001F54;">C</div>
+          <h4>Central Command</h4>
+          <div class="meta">HQ Lucknow</div>
+          <p>A training and administrative reserve hub for Uttar Pradesh, Uttarakhand, Bihar and Madhya Pradesh.</p>
+        </div>
+        <div class="card searchable" data-keywords="south western command army jaipur rajasthan desert">
+          <div class="badge" style="background:var(--navy);">SW</div>
+          <h4>South Western Command</h4>
+          <div class="meta">HQ Jaipur</div>
+          <p>Raised in 2005 to manage the Rajasthan desert sector, easing the load on Western and Southern Commands.</p>
+        </div>
+        <div class="card searchable" data-keywords="artrac army training command shimla doctrine">
+          <div class="badge" style="background:var(--red);">AT</div>
+          <h4>ARTRAC</h4>
+          <div class="meta">HQ Shimla</div>
+          <p>Army Training Command drives doctrine, training standards and future force restructuring across the Army.</p>
+        </div>
+      </div>
+
+      <div class="subhead"><span class="n">02</span> Regiments (Selected)</div>
+      <div class="cardgrid">
+        <div class="card searchable" data-keywords="gorkha rifles regiment nepal hills">
+          <div class="badge" style="background:var(--red);">GR</div>
+          <h4>Gorkha Rifles</h4>
+          <div class="meta">Infantry · War Cry: Jai Mahakali, Ayo Gorkhali</div>
+          <p>Seven Gorkha Rifles regiments, drawn from Nepali and Indian Gorkha communities, renowned for mountain and jungle warfare.</p>
+        </div>
+        <div class="card searchable" data-keywords="rajput regiment infantry">
+          <div class="badge" style="background:var(--khaki);">RR</div>
+          <h4>Rajput Regiment</h4>
+          <div class="meta">Infantry · War Cry: Bol Bajrang Bali Ki Jai</div>
+          <p>One of the oldest infantry regiments, tracing lineage to the 1770s, with a long list of battle honours.</p>
+        </div>
+        <div class="card searchable" data-keywords="sikh regiment infantry punjab">
+          <div class="badge" style="background:var(--navy);border:1px solid var(--sky);">SK</div>
+          <h4>Sikh Regiment</h4>
+          <div class="meta">Infantry · War Cry: Jo Bole So Nihal</div>
+          <p>Among the most decorated regiments of the Army, prominent in 1962, 1965, 1971 and Kargil.</p>
+        </div>
+        <div class="card searchable" data-keywords="maratha light infantry regiment">
+          <div class="badge" style="background:var(--red-dim);">ML</div>
+          <h4>Maratha Light Infantry</h4>
+          <div class="meta">Infantry · War Cry: Bol Shri Chhatrapati Shivaji Maharaj Ki Jai</div>
+          <p>Descended from Maratha regiments raised in the 1760s under the East India Company.</p>
+        </div>
+        <div class="card searchable" data-keywords="parachute regiment airborne special forces">
+          <div class="badge" style="background:var(--sky);color:#001F54;">PARA</div>
+          <h4>Parachute Regiment</h4>
+          <div class="meta">Airborne / Special Forces</div>
+          <p>Houses both conventional airborne battalions and the Para (Special Forces) units.</p>
+        </div>
+        <div class="card searchable" data-keywords="corps of engineers madras sappers bengal sappers bombay sappers">
+          <div class="badge" style="background:var(--navy);">CE</div>
+          <h4>Corps of Engineers</h4>
+          <div class="meta">Madras, Bengal & Bombay Sappers</div>
+          <p>Builds bridges and roads under fire, clears mines, and enables mobility for every other arm.</p>
+        </div>
+      </div>
+
+      <div class="subhead"><span class="n">03</span> Equipment Library</div>
+      <div class="equiprow">
+        <div class="equipcard searchable" data-keywords="t-90 bhishma tank main battle tank army">
+          <div class="imgwrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Army_T-90.jpg" alt="T-90 Bhishma tank"></div>
+          <div class="body"><h4>T-90 Bhishma</h4><div class="spec"><span>Main Battle Tank</span><span>125mm gun</span></div></div>
+        </div>
+        <div class="equipcard searchable" data-keywords="arjun mbt tank indigenous">
+          <div class="imgwrap" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--panel-2),var(--panel));"><span style="font-family:var(--mono);color:var(--text-faint);font-size:12px;">Arjun MBT — image forthcoming</span></div>
+          <div class="body"><h4>Arjun Mk1A</h4><div class="spec"><span>Main Battle Tank</span><span>Indigenous</span></div></div>
+        </div>
+        <div class="equipcard searchable" data-keywords="pinaka rocket artillery system">
+          <div class="imgwrap" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--panel-2),var(--panel));"><span style="font-family:var(--mono);color:var(--text-faint);font-size:12px;">Pinaka MBRL — image forthcoming</span></div>
+          <div class="body"><h4>Pinaka MBRL</h4><div class="spec"><span>Rocket Artillery</span><span>44 km range</span></div></div>
+        </div>
+        <div class="equipcard searchable" data-keywords="k9 vajra self propelled howitzer artillery">
+          <div class="imgwrap" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--panel-2),var(--panel));"><span style="font-family:var(--mono);color:var(--text-faint);font-size:12px;">K9 Vajra-T — image forthcoming</span></div>
+          <div class="body"><h4>K9 Vajra-T</h4><div class="spec"><span>Self-Propelled Howitzer</span><span>155mm/52 cal</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVY -->
+    <div class="branchpanel" id="panel-navy">
+      <div class="branchintro">
+        <div>
+          <div class="eyebrow">ESTABLISHED 1612 (LINEAGE) / 1950 (REPUBLIC)</div>
+          <h3 style="font-size:26px;color:#fff;">The Indian Navy</h3>
+          <p style="color:var(--text-dim);margin-top:12px;">The Indian Navy safeguards the country's maritime borders and interests across the Indian Ocean Region. It operates through three commands — Western, Eastern and Southern — and fields a blue-water fleet built around two active aircraft carriers, nuclear and conventional submarines, and a growing indigenous shipbuilding programme.</p>
+        </div>
+        <div class="photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/INS_Vikrant_and_INS_Vikramaditya_together_for_MILAN_2024.jpg" alt="INS Vikrant and INS Vikramaditya aircraft carriers">
+          <div class="caption">INS Vikrant (indigenous) alongside INS Vikramaditya during a fleet exercise</div>
+        </div>
+      </div>
+
+      <div class="subhead"><span class="n">01</span> Naval Commands & Fleets</div>
+      <div class="cardgrid">
+        <div class="card searchable" data-keywords="western naval command mumbai western fleet arabian sea">
+          <div class="badge" style="background:var(--navy);border:1px solid var(--sky);">W</div>
+          <h4>Western Naval Command</h4>
+          <div class="meta">HQ Mumbai · Sword Arm</div>
+          <p>Controls the Western Fleet across the Arabian Sea, the Navy's most operationally active seaboard.</p>
+        </div>
+        <div class="card searchable" data-keywords="eastern naval command visakhapatnam eastern fleet bay of bengal submarines">
+          <div class="badge" style="background:var(--red);">E</div>
+          <h4>Eastern Naval Command</h4>
+          <div class="meta">HQ Visakhapatnam · Sentinels of the East</div>
+          <p>Home to the Eastern Fleet and the Navy's strategic submarine forces overlooking the Bay of Bengal.</p>
+        </div>
+        <div class="card searchable" data-keywords="southern naval command kochi training command">
+          <div class="badge" style="background:var(--khaki);">S</div>
+          <h4>Southern Naval Command</h4>
+          <div class="meta">HQ Kochi · Training Command</div>
+          <p>The Navy's principal training establishment, including the Indian Naval Academy at Ezhimala.</p>
+        </div>
+      </div>
+
+      <div class="subhead"><span class="n">02</span> Fleet Assets</div>
+      <div class="equiprow">
+        <div class="equipcard searchable" data-keywords="ins vikrant aircraft carrier indigenous">
+          <div class="imgwrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/INS_Vikrant_and_INS_Vikramaditya_together_for_MILAN_2024.jpg" alt="INS Vikrant"></div>
+          <div class="body"><h4>INS Vikrant</h4><div class="spec"><span>Indigenous Carrier</span><span>Commissioned 2022</span></div></div>
+        </div>
+        <div class="equipcard searchable" data-keywords="scorpene kalvari submarine">
+          <div class="imgwrap" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--panel-2),var(--panel));"><span style="font-family:var(--mono);color:var(--text-faint);font-size:12px;">Kalvari-class — image forthcoming</span></div>
+          <div class="body"><h4>Kalvari-Class</h4><div class="spec"><span>Conventional Submarine</span><span>Scorpene design</span></div></div>
+        </div>
+        <div class="equipcard searchable" data-keywords="visakhapatnam class destroyer project 15b">
+          <div class="imgwrap" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--panel-2),var(--panel));"><span style="font-family:var(--mono);color:var(--text-faint);font-size:12px;">Visakhapatnam-class — image forthcoming</span></div>
+          <div class="body"><h4>Visakhapatnam-Class</h4><div class="spec"><span>Guided Missile Destroyer</span><span>Project 15B</span></div></div>
+        </div>
+        <div class="equipcard searchable" data-keywords="ins arihant nuclear submarine ballistic missile">
+          <div class="imgwrap" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--panel-2),var(--panel));"><span style="font-family:var(--mono);color:var(--text-faint);font-size:12px;">Arihant-class — image forthcoming</span></div>
+          <div class="body"><h4>Arihant-Class</h4><div class="spec"><span>SSBN</span><span>Strategic Deterrent</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AIR FORCE -->
+    <div class="branchpanel" id="panel-airforce">
+      <div class="branchintro">
+        <div>
+          <div class="eyebrow">ESTABLISHED 8 OCTOBER 1932</div>
+          <h3 style="font-size:26px;color:#fff;">The Indian Air Force</h3>
+          <p style="color:var(--text-dim);margin-top:12px;">The IAF secures Indian airspace and conducts aerial warfare, with a motto drawn from the Bhagavad Gita: "Touch the Sky with Glory." It is organised into seven commands spanning air defence, offensive strike, training and maintenance, and operates a mixed fleet of indigenous and imported fighters, transports and helicopters.</p>
+        </div>
+        <div class="photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/IAF_Tejas_full_size_(32941198511).jpg" alt="HAL Tejas Light Combat Aircraft">
+          <div class="caption">HAL Tejas Mk1, the IAF's indigenous light combat aircraft</div>
+        </div>
+      </div>
+
+      <div class="subhead"><span class="n">01</span> Air Force Commands</div>
+      <div class="cardgrid">
+        <div class="card searchable" data-keywords="western air command delhi">
+          <div class="badge" style="background:var(--sky);color:#001F54;">W</div>
+          <h4>Western Air Command</h4>
+          <div class="meta">HQ New Delhi</div>
+          <p>Covers the northern and north-western frontier, the IAF's most sensitive air-defence sector.</p>
+        </div>
+        <div class="card searchable" data-keywords="eastern air command shillong">
+          <div class="badge" style="background:var(--red);">E</div>
+          <h4>Eastern Air Command</h4>
+          <div class="meta">HQ Shillong</div>
+          <p>Guards the north-eastern skies along the Line of Actual Control with China.</p>
+        </div>
+        <div class="card searchable" data-keywords="central air command allahabad prayagraj">
+          <div class="badge" style="background:var(--khaki);">C</div>
+          <h4>Central Air Command</h4>
+          <div class="meta">HQ Prayagraj</div>
+          <p>Provides operational depth and disaster-response reach across central India.</p>
+        </div>
+        <div class="card searchable" data-keywords="southern air command thiruvananthapuram">
+          <div class="badge" style="background:var(--navy);border:1px solid var(--sky);">S</div>
+          <h4>Southern Air Command</h4>
+          <div class="meta">HQ Thiruvananthapuram</div>
+          <p>Oversees the peninsular region and coordinates with Southern Naval Command on maritime air cover.</p>
+        </div>
+        <div class="card searchable" data-keywords="training command bangalore">
+          <div class="badge" style="background:var(--red-dim);">TR</div>
+          <h4>Training Command</h4>
+          <div class="meta">HQ Bengaluru</div>
+          <p>Runs pilot, technical and ground-duty training across the Air Force's academies.</p>
+        </div>
+        <div class="card searchable" data-keywords="maintenance command nagpur">
+          <div class="badge" style="background:var(--navy);">MC</div>
+          <h4>Maintenance Command</h4>
+          <div class="meta">HQ Nagpur</div>
+          <p>Sustains aircraft serviceability through depots and overhaul facilities nationwide.</p>
+        </div>
+      </div>
+
+      <div class="subhead"><span class="n">02</span> Aircraft Encyclopedia</div>
+      <div class="equiprow">
+        <div class="equipcard searchable" data-keywords="tejas hal lca fighter light combat aircraft">
+          <div class="imgwrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/IAF_Tejas_full_size_(32941198511).jpg" alt="HAL Tejas"></div>
+          <div class="body"><h4>HAL Tejas Mk1/1A</h4><div class="spec"><span>Light Combat Aircraft</span><span>Single-engine</span></div></div>
+        </div>
+        <div class="equipcard searchable" data-keywords="su-30mki sukhoi fighter multirole">
+          <div class="imgwrap" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--panel-2),var(--panel));"><span style="font-family:var(--mono);color:var(--text-faint);font-size:12px;">Su-30MKI — image forthcoming</span></div>
+          <div class="body"><h4>Su-30MKI</h4><div class="spec"><span>Air Superiority Fighter</span><span>Twin-engine</span></div></div>
+        </div>
+        <div class="equipcard searchable" data-keywords="rafale fighter dassault">
+          <div class="imgwrap" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--panel-2),var(--panel));"><span style="font-family:var(--mono);color:var(--text-faint);font-size:12px;">Rafale — image forthcoming</span></div>
+          <div class="body"><h4>Dassault Rafale</h4><div class="spec"><span>Omnirole Fighter</span><span>Twin-engine</span></div></div>
+        </div>
+        <div class="equipcard searchable" data-keywords="c-130j hercules transport aircraft">
+          <div class="imgwrap" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--panel-2),var(--panel));"><span style="font-family:var(--mono);color:var(--text-faint);font-size:12px;">C-130J Hercules — image forthcoming</span></div>
+          <div class="body"><h4>C-130J Super Hercules</h4><div class="spec"><span>Special Ops Transport</span><span>Turboprop</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline">
+  <div class="container">
+    <div class="sectitle">
+      <div><div class="eyebrow">SEVEN DECADES OF SERVICE</div><h2>A Short Military Timeline</h2></div>
+      <p>A condensed timeline — not exhaustive — marking turning points since independence.</p>
+    </div>
+    <div class="timeline">
+      <div class="tlitem"><div class="yr">1947–48</div><h4>First Kashmir War</h4><p>The newly independent Indian Army airlifts troops into Srinagar to repel raiders, its first major operation.</p></div>
+      <div class="tlitem"><div class="yr">1961</div><h4>Operation Vijay (Goa)</h4><p>Indian forces end Portuguese colonial rule over Goa, Daman and Diu.</p></div>
+      <div class="tlitem"><div class="yr">1965</div><h4>Second India-Pakistan War</h4><p>Large tank battles in the Punjab and Sindh sectors, including the Battle of Asal Uttar.</p></div>
+      <div class="tlitem"><div class="yr">1971</div><h4>Bangladesh Liberation War</h4><p>A coordinated tri-service campaign leads to the surrender of Pakistani forces in Dhaka and the creation of Bangladesh.</p></div>
+      <div class="tlitem"><div class="yr">1999</div><h4>Kargil War</h4><p>Operation Vijay recaptures high-altitude posts in Kargil, with heavy IAF close air support under Operation Safed Sagar.</p></div>
+      <div class="tlitem"><div class="yr">2019</div><h4>Balakot Air Strike</h4><p>IAF Mirage 2000 jets conduct a cross-border strike, followed by an aerial engagement over Kashmir.</p></div>
+      <div class="tlitem"><div class="yr">2020</div><h4>Galwan Valley Clash</h4><p>A deadly close-quarter clash with Chinese forces in Ladakh triggers a major standoff and force build-up.</p></div>
+      <div class="tlitem"><div class="yr">2022</div><h4>INS Vikrant Commissioned</h4><p>India's first indigenously built aircraft carrier enters service, a milestone for domestic shipbuilding.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECIAL FORCES ============ -->
+<section id="specialforces">
+  <div class="container">
+    <div class="sectitle">
+      <div><div class="eyebrow">TRI-SERVICE SPECIAL OPERATIONS</div><h2>Special Forces Command Centre</h2></div>
+      <p>India's premier special operations units, one from each service.</p>
+    </div>
+    <div class="sfgrid">
+      <div class="sfcard searchable" data-tag="ARMY" data-keywords="para sf special forces commandos">
+        <h3>PARA (Special Forces)</h3>
+        <div class="motto">Balidan — "Sacrifice"</div>
+        <ul>
+          <li>Raised from the Parachute Regiment; battalions numbered from the 1 Para (SF) lineage.</li>
+          <li>Trained for direct action, deep reconnaissance and counter-terror operations.</li>
+          <li>Selection is famously attritional, run as a multi-week probation before permanent posting.</li>
+        </ul>
+      </div>
+      <div class="sfcard searchable" data-tag="NAVY" data-keywords="marcos marine commandos navy special forces">
+        <h3>MARCOS</h3>
+        <div class="motto">"A Frogman is Never Off Duty"</div>
+        <ul>
+          <li>Marine Commando Force specialising in amphibious raids, ship-boarding and underwater demolition.</li>
+          <li>Draws volunteers from across the Navy through an extremely selective probation cycle.</li>
+          <li>Operates alongside the Navy's clandestine diving and special warfare units.</li>
+        </ul>
+      </div>
+      <div class="sfcard searchable" data-tag="AIR FORCE" data-keywords="garud commandos air force special forces">
+        <h3>Garud Commando Force</h3>
+        <div class="motto">"Swift and Bold"</div>
+        <ul>
+          <li>Raised in 2004 to protect air bases and conduct combat search-and-rescue.</li>
+          <li>Trains jointly with Army and Navy special forces for joint special operations.</li>
+          <li>Increasingly employed in offensive special-operations roles alongside airbase defence.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODERNIZATION ============ -->
+<section id="modernization">
+  <div class="container">
+    <div class="sectitle">
+      <div><div class="eyebrow">WHAT COMES NEXT</div><h2>Modernization Programmes</h2></div>
+      <p>Indigenous programmes shaping the next generation of Indian defence capability.</p>
+    </div>
+    <div class="modgrid">
+      <div class="modcard searchable" data-keywords="amca advanced medium combat aircraft stealth fighter"><div class="tag">AIR</div><h4>AMCA</h4><p>A twin-engine stealth fighter under indigenous development for the 2030s.</p></div>
+      <div class="modcard searchable" data-keywords="tejas mk2 fighter"><div class="tag">AIR</div><h4>Tejas Mk2</h4><p>A larger, more powerful evolution of the Tejas line with greater range and payload.</p></div>
+      <div class="modcard searchable" data-keywords="tedbf twin engine deck based fighter navy"><div class="tag">NAVY</div><h4>TEDBF</h4><p>A twin-engine deck-based fighter planned for future Indian aircraft carriers.</p></div>
+      <div class="modcard searchable" data-keywords="ghatak ucav stealth drone"><div class="tag">AIR</div><h4>Ghatak UCAV</h4><p>An unmanned stealth combat aircraft concept under DRDO development.</p></div>
+      <div class="modcard searchable" data-keywords="cats warrior swarm drone loyal wingman"><div class="tag">AIR</div><h4>CATS Warrior</h4><p>An unmanned "loyal wingman" drone designed to fly alongside manned fighters.</p></div>
+      <div class="modcard searchable" data-keywords="hypersonic missile brahmos"><div class="tag">STRATEGIC</div><h4>Hypersonic Missiles</h4><p>Ongoing work on hypersonic glide vehicles to extend precision-strike reach.</p></div>
+      <div class="modcard searchable" data-keywords="swarm drones loitering munitions"><div class="tag">ARMY</div><h4>Swarm Drones</h4><p>Coordinated drone swarms for reconnaissance and loitering-munition strikes.</p></div>
+      <div class="modcard searchable" data-keywords="agniveer agnipath scheme recruitment reform"><div class="tag">TRI-SERVICE</div><h4>Agnipath Scheme</h4><p>A short-service tour-based recruitment model introduced in 2022 across all three services.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RANKS ============ -->
+<section id="ranks">
+  <div class="container">
+    <div class="sectitle">
+      <div><div class="eyebrow">WHO OUTRANKS WHOM</div><h2>Rank Comparison</h2></div>
+      <p>Broadly equivalent senior ranks across the three services (hover a row to compare).</p>
+    </div>
+    <div class="tablewrap">
+      <table class="ranktable">
+        <thead><tr><th>Tier</th><th>Army</th><th>Navy</th><th>Air Force</th></tr></thead>
+        <tbody>
+          <tr><td>5-Star (Wartime only)</td><td>Field Marshal</td><td>Admiral of the Fleet</td><td>Marshal of the Air Force</td></tr>
+          <tr><td>4-Star</td><td>General</td><td>Admiral</td><td>Air Chief Marshal</td></tr>
+          <tr><td>3-Star</td><td>Lieutenant General</td><td>Vice Admiral</td><td>Air Marshal</td></tr>
+          <tr><td>2-Star</td><td>Major General</td><td>Rear Admiral</td><td>Air Vice Marshal</td></tr>
+          <tr><td>1-Star</td><td>Brigadier</td><td>Commodore</td><td>Air Commodore</td></tr>
+          <tr><td>Senior Field</td><td>Colonel</td><td>Captain</td><td>Group Captain</td></tr>
+          <tr><td>Field</td><td>Lieutenant Colonel</td><td>Commander</td><td>Wing Commander</td></tr>
+          <tr><td>Junior Field</td><td>Major</td><td>Lieutenant Commander</td><td>Squadron Leader</td></tr>
+          <tr><td>Company Officer</td><td>Captain</td><td>Lieutenant</td><td>Flight Lieutenant</td></tr>
+          <tr><td>Entry Officer</td><td>Lieutenant</td><td>Sub Lieutenant</td><td>Flying Officer</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLANTRY AWARDS ============ -->
+<section id="awards">
+  <div class="container">
+    <div class="sectitle">
+      <div><div class="eyebrow">HONOURING VALOUR</div><h2>Gallantry Awards</h2></div>
+    </div>
+    <div class="branchintro" style="align-items:center;">
+      <div class="cardgrid" style="grid-template-columns:1fr 1fr;">
+        <div class="card searchable" data-keywords="param vir chakra highest gallantry award">
+          <h4>Param Vir Chakra</h4>
+          <div class="meta">Highest wartime award</div>
+          <p>India's highest military decoration for conspicuous bravery in the presence of the enemy — awarded 21 times since 1950.</p>
+        </div>
+        <div class="card searchable" data-keywords="maha vir chakra gallantry award">
+          <h4>Maha Vir Chakra</h4>
+          <div class="meta">Second-highest wartime award</div>
+          <p>Awarded for acts of conspicuous gallantry in the presence of the enemy, on land, sea or air.</p>
+        </div>
+        <div class="card searchable" data-keywords="vir chakra gallantry award">
+          <h4>Vir Chakra</h4>
+          <div class="meta">Third-highest wartime award</div>
+          <p>Recognises gallantry in battle, ranking just below the Maha Vir Chakra.</p>
+        </div>
+        <div class="card searchable" data-keywords="ashoka chakra peacetime gallantry award">
+          <h4>Ashoka Chakra</h4>
+          <div class="meta">Highest peacetime award</div>
+          <p>The peacetime equivalent of the Param Vir Chakra, for the most conspicuous bravery outside war.</p>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Param-vir-chakra-medal.png" alt="Param Vir Chakra medal" style="height:260px;object-fit:contain;background:#0c1420;padding:20px;">
+        <div class="caption">The Param Vir Chakra medal</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECRUITMENT ============ -->
+<section id="recruitment">
+  <div class="container">
+    <div class="sectitle">
+      <div><div class="eyebrow">SERVE YOUR COUNTRY</div><h2>How to Join the Forces</h2></div>
+      <p>The major entry routes into the Army, Navy and Air Force.</p>
+    </div>
+    <div class="entrygrid">
+      <div class="entrycard searchable" data-keywords="nda national defence academy entry 12th class">
+        <h4>NDA</h4>
+        <div class="row"><span>Eligibility</span><b>After Class 12</b></div>
+        <div class="row"><span>Age</span><b>16.5–19.5 yrs</b></div>
+        <div class="row"><span>Route</span><b>UPSC written + SSB</b></div>
+      </div>
+      <div class="entrycard searchable" data-keywords="cds combined defence services graduate entry">
+        <h4>CDS</h4>
+        <div class="row"><span>Eligibility</span><b>Graduate</b></div>
+        <div class="row"><span>Age</span><b>19–25 yrs (varies)</b></div>
+        <div class="row"><span>Route</span><b>UPSC written + SSB</b></div>
+      </div>
+      <div class="entrycard searchable" data-keywords="afcat air force common admission test">
+        <h4>AFCAT</h4>
+        <div class="row"><span>Eligibility</span><b>Graduate / Engineering</b></div>
+        <div class="row"><span>Age</span><b>20–24 yrs (varies)</b></div>
+        <div class="row"><span>Route</span><b>IAF written + AFSB</b></div>
+      </div>
+      <div class="entrycard searchable" data-keywords="agniveer agnipath short service tour class 10 12">
+        <h4>Agniveer (Agnipath)</h4>
+        <div class="row"><span>Eligibility</span><b>Class 10 / 12</b></div>
+        <div class="row"><span>Age</span><b>17.5–21 yrs</b></div>
+        <div class="row"><span>Route</span><b>Written + Physical + Medical</b></div>
+      </div>
+      <div class="entrycard searchable" data-keywords="tes technical entry scheme 12th pcm">
+        <h4>Technical Entry Scheme</h4>
+        <div class="row"><span>Eligibility</span><b>Class 12 (PCM)</b></div>
+        <div class="row"><span>Age</span><b>16.5–19.5 yrs</b></div>
+        <div class="row"><span>Route</span><b>Direct merit + SSB</b></div>
+      </div>
+      <div class="entrycard searchable" data-keywords="jag judge advocate general law entry">
+        <h4>JAG Entry</h4>
+        <div class="row"><span>Eligibility</span><b>Law Graduate</b></div>
+        <div class="row"><span>Age</span><b>21–27 yrs</b></div>
+        <div class="row"><span>Route</span><b>Merit + SSB interview</b></div>
+      </div>
+    </div>
+
+    <div class="calcbox">
+      <h3>Quick Eligibility Check</h3>
+      <div class="calcform">
+        <div>
+          <label>Age</label>
+          <input type="number" id="calcAge" min="15" max="30" placeholder="e.g. 18">
+        </div>
+        <div>
+          <label>Education</label>
+          <select id="calcEdu">
+            <option value="10">Passed Class 10</option>
+            <option value="12">Passed Class 12</option>
+            <option value="12pcm">Class 12 with PCM</option>
+            <option value="grad">Graduate</option>
+            <option value="law">Law Graduate</option>
+          </select>
+        </div>
+        <div>
+          <label>Preferred Service</label>
+          <select id="calcBranch">
+            <option value="any">Any</option>
+            <option value="army">Army</option>
+            <option value="navy">Navy</option>
+            <option value="airforce">Air Force</option>
+          </select>
+        </div>
+        <div><button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="checkEligibility()">Check Schemes</button></div>
+      </div>
+      <div id="calcResult">Enter your details above to see which entry schemes you may be able to apply for.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="sectitle">
+      <div><div class="eyebrow">COMMON QUESTIONS</div><h2>FAQ</h2></div>
+    </div>
+    <div class="faq">
+      <div class="faqitem" onclick="this.classList.toggle('open')">
+        <div class="faqq"><span>What is the minimum age to join the NDA?</span><span class="plus">+</span></div>
+        <div class="faqa">Candidates are generally eligible between 16.5 and 19.5 years of age at the time of the exam; check the current UPSC notification for exact cut-offs.</div>
+      </div>
+      <div class="faqitem" onclick="this.classList.toggle('open')">
+        <div class="faqq"><span>What is the Agnipath scheme?</span><span class="plus">+</span></div>
+        <div class="faqa">Agnipath is a short-service enlistment model introduced in 2022 across the Army, Navy and Air Force, under which recruits called Agniveers serve an initial tour before a fraction are offered permanent retention.</div>
+      </div>
+      <div class="faqitem" onclick="this.classList.toggle('open')">
+        <div class="faqq"><span>Can women join the Indian Armed Forces?</span><span class="plus">+</span></div>
+        <div class="faqa">Yes — women are commissioned across most Army, Navy and Air Force branches, including permanent commission and, in recent years, combat roles such as fighter piloting.</div>
+      </div>
+      <div class="faqitem" onclick="this.classList.toggle('open')">
+        <div class="faqq"><span>How is NCC different from joining the Armed Forces directly?</span><span class="plus">+</span></div>
+        <div class="faqa">The National Cadet Corps is a youth training programme run in schools and colleges; it builds discipline and offers entry-exam advantages, but is not itself a military job — direct entry still requires schemes such as NDA, CDS or Agnipath.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footgrid">
+    <div>
+      <div class="brand" style="margin-bottom:14px;">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_the_Indian_Armed_Forces.svg" alt="" style="height:34px;">
+        <span class="name" style="font-size:17px;">BHARAT <b>RAKSHA</b></span>
+      </div>
+      <p style="font-size:13px;color:#8fa0b5;max-width:280px;">An independent educational reference on the Indian Armed Forces, built for students, aspirants and enthusiasts. Not an official Ministry of Defence property.</p>
+    </div>
+    <div><h5>Services</h5><a href="#panel-army" onclick="showBranch('army',document.querySelectorAll('.branchtab')[0])">Indian Army</a><a href="#panel-navy" onclick="showBranch('navy',document.querySelectorAll('.branchtab')[1])">Indian Navy</a><a href="#panel-airforce" onclick="showBranch('airforce',document.querySelectorAll('.branchtab')[2])">Indian Air Force</a><a href="#specialforces">Special Forces</a></div>
+    <div><h5>Learn</h5><a href="#timeline">History Timeline</a><a href="#ranks">Rank Structure</a><a href="#awards">Gallantry Awards</a><a href="#modernization">Modernization</a></div>
+    <div><h5>Join</h5><a href="#recruitment">Entry Schemes</a><a href="#faq">FAQ</a></div>
+    <div><h5>Resources</h5><a href="https://www.joinindianarmy.nic.in" target="_blank" rel="noopener">Join Indian Army ↗</a><a href="https://www.joinindiannavy.gov.in" target="_blank" rel="noopener">Join Indian Navy ↗</a><a href="https://afcat.cdac.in" target="_blank" rel="noopener">Join Indian Air Force ↗</a></div>
+  </div>
+  <div class="container footbottom">
+    <span>© 2026 BHARAT RAKSHA — EDUCATIONAL PROJECT · NOT AFFILIATED WITH THE MINISTRY OF DEFENCE</span>
+    <span class="visits">TOTAL VISITS<b id="visitCount">—</b></span>
+    <span>EMBLEMS &amp; PHOTOGRAPHS VIA WIKIMEDIA COMMONS, PUBLIC DOMAIN / CC-LICENSED</span>
+  </div>
+</footer>
+
+<script>
+/* ===== THEME TOGGLE ===== */
+function toggleTheme(){
+  const html=document.documentElement;
+  const now=html.getAttribute('data-theme');
+  const next= now==='dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme',next);
+  document.getElementById('themeBtn').textContent = next==='dark' ? '☾' : '☀';
+}
+
+/* ===== MOBILE NAV ===== */
+document.querySelectorAll('.navlinks a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));
+});
+
+/* ===== BRANCH TABS ===== */
+function showBranch(name, btn){
+  document.querySelectorAll('.branchpanel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+name).classList.add('active');
+  document.querySelectorAll('.branchtab').forEach(t=>t.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+}
+
+/* ===== SEARCH ===== */
+function toggleSearchBox(){
+  const box=document.getElementById('searchBox');
+  box.classList.toggle('active');
+  if(box.classList.contains('active')) box.focus();
+  else document.getElementById('searchResults').classList.remove('show');
+}
+function runSearch(q){
+  const results=document.getElementById('searchResults');
+  q=q.trim().toLowerCase();
+  if(q.length<2){ results.classList.remove('show'); return; }
+  const items=document.querySelectorAll('.searchable');
+  let matches=[];
+  items.forEach(el=>{
+    const kw=(el.getAttribute('data-keywords')||'').toLowerCase();
+    const title=(el.querySelector('h3,h4')||{}).textContent || '';
+    if(kw.includes(q) || title.toLowerCase().includes(q)){
+      matches.push({title:title, section:el.closest('section')?el.closest('section').id:'', el:el});
+    }
+  });
+  results.innerHTML='';
+  if(matches.length===0){
+    results.innerHTML='<div class="empty">No matches. Try "Tejas", "T-90", "MARCOS", "NDA"…</div>';
+  } else {
+    matches.slice(0,12).forEach(m=>{
+      const a=document.createElement('a');
+      a.href='#'+m.section;
+      a.innerHTML='<div class="cat">'+m.section+'</div>'+m.title;
+      a.onclick=()=>{ m.el.scrollIntoView({behavior:'smooth',block:'center'}); results.classList.remove('show'); };
+      results.appendChild(a);
+    });
+  }
+  results.classList.add('show');
+}
+
+/* ===== ELIGIBILITY CALCULATOR ===== */
+function checkEligibilityLocal(){
+  const age=parseFloat(document.getElementById('calcAge').value);
+  const edu=document.getElementById('calcEdu').value;
+  const branch=document.getElementById('calcBranch').value;
+  const out=document.getElementById('calcResult');
+  if(!age || age<15 || age>35){ out.innerHTML='Please enter a valid age between 15 and 35.'; return; }
+
+  const schemes=[
+    {name:'Agniveer (Agnipath)',minAge:17.5,maxAge:21,edu:['10','12','12pcm','grad','law'],branch:['any','army','navy','airforce']},
+    {name:'NDA',minAge:16.5,maxAge:19.5,edu:['12','12pcm'],branch:['any','army','navy','airforce']},
+    {name:'Technical Entry Scheme (TES)',minAge:16.5,maxAge:19.5,edu:['12pcm'],branch:['army']},
+    {name:'CDS',minAge:19,maxAge:25,edu:['grad','12pcm','law'],branch:['any','army','navy','airforce']},
+    {name:'AFCAT',minAge:20,maxAge:24,edu:['grad','12pcm'],branch:['airforce','any']},
+    {name:'JAG Entry',minAge:21,maxAge:27,edu:['law'],branch:['army','navy','airforce','any']},
+  ];
+
+  const hits=schemes.filter(s=>{
+    const ageOk = age>=s.minAge && age<=s.maxAge;
+    const eduOk = s.edu.includes(edu);
+    const branchOk = branch==='any' ? true : (s.branch.includes(branch) || s.branch.includes('any'));
+    return ageOk && eduOk && branchOk;
+  });
+
+  if(hits.length===0){
+    out.innerHTML='No standard scheme matched exactly — eligibility windows vary by notification year, so treat this as a rough guide and check the official portal for the current cut-offs.';
+  } else {
+    out.innerHTML='Based on what you entered, you may want to look into: '+
+      hits.map(h=>'<span class="hit">'+h.name+'</span>').join(', ')+
+      '. <br><small style="color:var(--text-faint);">This is a simplified estimate, not an official eligibility ruling.</small>';
+  }
+}
+
+async function checkEligibility(){
+  const out=document.getElementById('calcResult');
+  const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  try{
+    const r=await fetch('/api/eligibility',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({age:document.getElementById('calcAge').value,
+        education:document.getElementById('calcEdu').value,branch:document.getElementById('calcBranch').value})});
+    const d=await r.json();
+    if(!r.ok){ out.textContent=d.error||'Something went wrong.'; return; }
+    out.innerHTML = d.matches.length
+      ? 'Based on what you entered, you may want to look into: '+d.matches.map(m=>'<span class="hit">'+esc(m.name)+'</span>').join(', ')+'. <br><small style="color:var(--text-faint);">'+esc(d.note)+'</small>'
+      : 'No standard scheme matched exactly — eligibility windows vary by notification year, so check the official portal for current cut-offs.';
+  }catch(e){ checkEligibilityLocal(); }   // server unreachable: fall back to the built-in rules
+}
+
+/* close search results on outside click */
+document.addEventListener('click',(e)=>{
+  if(!e.target.closest('.searchwrap') && !e.target.closest('.iconbtn')){
+    document.getElementById('searchResults').classList.remove('show');
+  }
+});
+</script>
+<script src="/js/site.js"></script>
+</body>
+</html>

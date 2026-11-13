@@ -1,0 +1,552 @@
+[
+  {
+    "slug": "northern-command",
+    "title": "Northern Command",
+    "category": "Army",
+    "subcategory": "Army Commands",
+    "summary": "Guards Jammu & Kashmir and Ladakh, including the Siachen Glacier and the Line of Control — the Army's most demanding high-altitude theatre.",
+    "keywords": "northern command army leh srinagar",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "western-command",
+    "title": "Western Command",
+    "category": "Army",
+    "subcategory": "Army Commands",
+    "summary": "Covers Punjab and parts of Rajasthan facing the western international border; home to key strike-corps formations.",
+    "keywords": "western command army chandimandir punjab",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "eastern-command",
+    "title": "Eastern Command",
+    "category": "Army",
+    "subcategory": "Army Commands",
+    "summary": "Responsible for the entire north-eastern sector and the Line of Actual Control with China across Arunachal Pradesh and Sikkim.",
+    "keywords": "eastern command army kolkata northeast china border",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "southern-command",
+    "title": "Southern Command",
+    "category": "Army",
+    "subcategory": "Army Commands",
+    "summary": "The oldest command, overseeing the peninsular states and coastal defence coordination with the Navy.",
+    "keywords": "southern command army pune peninsula",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "central-command",
+    "title": "Central Command",
+    "category": "Army",
+    "subcategory": "Army Commands",
+    "summary": "A training and administrative reserve hub for Uttar Pradesh, Uttarakhand, Bihar and Madhya Pradesh.",
+    "keywords": "central command army lucknow",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "south-western-command",
+    "title": "South Western Command",
+    "category": "Army",
+    "subcategory": "Army Commands",
+    "summary": "Raised in 2005 to manage the Rajasthan desert sector, easing the load on Western and Southern Commands.",
+    "keywords": "south western command army jaipur rajasthan desert",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "artrac",
+    "title": "ARTRAC",
+    "category": "Army",
+    "subcategory": "Army Commands",
+    "summary": "Army Training Command drives doctrine, training standards and future force restructuring across the Army.",
+    "keywords": "artrac army training command shimla doctrine",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "gorkha-rifles",
+    "title": "Gorkha Rifles",
+    "category": "Army",
+    "subcategory": "Regiments (Selected)",
+    "summary": "Seven Gorkha Rifles regiments, drawn from Nepali and Indian Gorkha communities, renowned for mountain and jungle warfare.",
+    "keywords": "gorkha rifles regiment nepal hills",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "rajput-regiment",
+    "title": "Rajput Regiment",
+    "category": "Army",
+    "subcategory": "Regiments (Selected)",
+    "summary": "One of the oldest infantry regiments, tracing lineage to the 1770s, with a long list of battle honours.",
+    "keywords": "rajput regiment infantry",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "sikh-regiment",
+    "title": "Sikh Regiment",
+    "category": "Army",
+    "subcategory": "Regiments (Selected)",
+    "summary": "Among the most decorated regiments of the Army, prominent in 1962, 1965, 1971 and Kargil.",
+    "keywords": "sikh regiment infantry punjab",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "maratha-light-infantry",
+    "title": "Maratha Light Infantry",
+    "category": "Army",
+    "subcategory": "Regiments (Selected)",
+    "summary": "Descended from Maratha regiments raised in the 1760s under the East India Company.",
+    "keywords": "maratha light infantry regiment",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "parachute-regiment",
+    "title": "Parachute Regiment",
+    "category": "Army",
+    "subcategory": "Regiments (Selected)",
+    "summary": "Houses both conventional airborne battalions and the Para (Special Forces) units.",
+    "keywords": "parachute regiment airborne special forces",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "corps-of-engineers",
+    "title": "Corps of Engineers",
+    "category": "Army",
+    "subcategory": "Regiments (Selected)",
+    "summary": "Builds bridges and roads under fire, clears mines, and enables mobility for every other arm.",
+    "keywords": "corps of engineers madras sappers bengal sappers bombay sappers",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "t-90-bhishma",
+    "title": "T-90 Bhishma",
+    "category": "Army",
+    "subcategory": "Equipment Library",
+    "summary": "Main Battle Tank · 125mm gun",
+    "keywords": "t-90 bhishma tank main battle tank army",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "arjun-mk1a",
+    "title": "Arjun Mk1A",
+    "category": "Army",
+    "subcategory": "Equipment Library",
+    "summary": "Main Battle Tank · Indigenous",
+    "keywords": "arjun mbt tank indigenous",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "pinaka-mbrl",
+    "title": "Pinaka MBRL",
+    "category": "Army",
+    "subcategory": "Equipment Library",
+    "summary": "Rocket Artillery · 44 km range",
+    "keywords": "pinaka rocket artillery system",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "k9-vajra-t",
+    "title": "K9 Vajra-T",
+    "category": "Army",
+    "subcategory": "Equipment Library",
+    "summary": "Self-Propelled Howitzer · 155mm/52 cal",
+    "keywords": "k9 vajra self propelled howitzer artillery",
+    "anchor": "services",
+    "panel": "army"
+  },
+  {
+    "slug": "western-naval-command",
+    "title": "Western Naval Command",
+    "category": "Navy",
+    "subcategory": "Naval Commands & Fleets",
+    "summary": "Controls the Western Fleet across the Arabian Sea, the Navy's most operationally active seaboard.",
+    "keywords": "western naval command mumbai western fleet arabian sea",
+    "anchor": "services",
+    "panel": "navy"
+  },
+  {
+    "slug": "eastern-naval-command",
+    "title": "Eastern Naval Command",
+    "category": "Navy",
+    "subcategory": "Naval Commands & Fleets",
+    "summary": "Home to the Eastern Fleet and the Navy's strategic submarine forces overlooking the Bay of Bengal.",
+    "keywords": "eastern naval command visakhapatnam eastern fleet bay of bengal submarines",
+    "anchor": "services",
+    "panel": "navy"
+  },
+  {
+    "slug": "southern-naval-command",
+    "title": "Southern Naval Command",
+    "category": "Navy",
+    "subcategory": "Naval Commands & Fleets",
+    "summary": "The Navy's principal training establishment, including the Indian Naval Academy at Ezhimala.",
+    "keywords": "southern naval command kochi training command",
+    "anchor": "services",
+    "panel": "navy"
+  },
+  {
+    "slug": "ins-vikrant",
+    "title": "INS Vikrant",
+    "category": "Navy",
+    "subcategory": "Fleet Assets",
+    "summary": "Indigenous Carrier · Commissioned 2022",
+    "keywords": "ins vikrant aircraft carrier indigenous",
+    "anchor": "services",
+    "panel": "navy"
+  },
+  {
+    "slug": "kalvari-class",
+    "title": "Kalvari-Class",
+    "category": "Navy",
+    "subcategory": "Fleet Assets",
+    "summary": "Conventional Submarine · Scorpene design",
+    "keywords": "scorpene kalvari submarine",
+    "anchor": "services",
+    "panel": "navy"
+  },
+  {
+    "slug": "visakhapatnam-class",
+    "title": "Visakhapatnam-Class",
+    "category": "Navy",
+    "subcategory": "Fleet Assets",
+    "summary": "Guided Missile Destroyer · Project 15B",
+    "keywords": "visakhapatnam class destroyer project 15b",
+    "anchor": "services",
+    "panel": "navy"
+  },
+  {
+    "slug": "arihant-class",
+    "title": "Arihant-Class",
+    "category": "Navy",
+    "subcategory": "Fleet Assets",
+    "summary": "SSBN · Strategic Deterrent",
+    "keywords": "ins arihant nuclear submarine ballistic missile",
+    "anchor": "services",
+    "panel": "navy"
+  },
+  {
+    "slug": "western-air-command",
+    "title": "Western Air Command",
+    "category": "Air Force",
+    "subcategory": "Air Force Commands",
+    "summary": "Covers the northern and north-western frontier, the IAF's most sensitive air-defence sector.",
+    "keywords": "western air command delhi",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "eastern-air-command",
+    "title": "Eastern Air Command",
+    "category": "Air Force",
+    "subcategory": "Air Force Commands",
+    "summary": "Guards the north-eastern skies along the Line of Actual Control with China.",
+    "keywords": "eastern air command shillong",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "central-air-command",
+    "title": "Central Air Command",
+    "category": "Air Force",
+    "subcategory": "Air Force Commands",
+    "summary": "Provides operational depth and disaster-response reach across central India.",
+    "keywords": "central air command allahabad prayagraj",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "southern-air-command",
+    "title": "Southern Air Command",
+    "category": "Air Force",
+    "subcategory": "Air Force Commands",
+    "summary": "Oversees the peninsular region and coordinates with Southern Naval Command on maritime air cover.",
+    "keywords": "southern air command thiruvananthapuram",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "training-command",
+    "title": "Training Command",
+    "category": "Air Force",
+    "subcategory": "Air Force Commands",
+    "summary": "Runs pilot, technical and ground-duty training across the Air Force's academies.",
+    "keywords": "training command bangalore",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "maintenance-command",
+    "title": "Maintenance Command",
+    "category": "Air Force",
+    "subcategory": "Air Force Commands",
+    "summary": "Sustains aircraft serviceability through depots and overhaul facilities nationwide.",
+    "keywords": "maintenance command nagpur",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "hal-tejas-mk1-1a",
+    "title": "HAL Tejas Mk1/1A",
+    "category": "Air Force",
+    "subcategory": "Aircraft Encyclopedia",
+    "summary": "Light Combat Aircraft · Single-engine",
+    "keywords": "tejas hal lca fighter light combat aircraft",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "su-30mki",
+    "title": "Su-30MKI",
+    "category": "Air Force",
+    "subcategory": "Aircraft Encyclopedia",
+    "summary": "Air Superiority Fighter · Twin-engine",
+    "keywords": "su-30mki sukhoi fighter multirole",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "dassault-rafale",
+    "title": "Dassault Rafale",
+    "category": "Air Force",
+    "subcategory": "Aircraft Encyclopedia",
+    "summary": "Omnirole Fighter · Twin-engine",
+    "keywords": "rafale fighter dassault",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "c-130j-super-hercules",
+    "title": "C-130J Super Hercules",
+    "category": "Air Force",
+    "subcategory": "Aircraft Encyclopedia",
+    "summary": "Special Ops Transport · Turboprop",
+    "keywords": "c-130j hercules transport aircraft",
+    "anchor": "services",
+    "panel": "airforce"
+  },
+  {
+    "slug": "para-special-forces",
+    "title": "PARA (Special Forces)",
+    "category": "Special Forces",
+    "subcategory": "",
+    "summary": "Raised from the Parachute Regiment; battalions numbered from the 1 Para (SF) lineage.",
+    "keywords": "para sf special forces commandos",
+    "anchor": "specialforces",
+    "panel": ""
+  },
+  {
+    "slug": "marcos",
+    "title": "MARCOS",
+    "category": "Special Forces",
+    "subcategory": "",
+    "summary": "Marine Commando Force specialising in amphibious raids, ship-boarding and underwater demolition.",
+    "keywords": "marcos marine commandos navy special forces",
+    "anchor": "specialforces",
+    "panel": ""
+  },
+  {
+    "slug": "garud-commando-force",
+    "title": "Garud Commando Force",
+    "category": "Special Forces",
+    "subcategory": "",
+    "summary": "Raised in 2004 to protect air bases and conduct combat search-and-rescue.",
+    "keywords": "garud commandos air force special forces",
+    "anchor": "specialforces",
+    "panel": ""
+  },
+  {
+    "slug": "amca",
+    "title": "AMCA",
+    "category": "Modernization",
+    "subcategory": "",
+    "summary": "A twin-engine stealth fighter under indigenous development for the 2030s.",
+    "keywords": "amca advanced medium combat aircraft stealth fighter",
+    "anchor": "modernization",
+    "panel": ""
+  },
+  {
+    "slug": "tejas-mk2",
+    "title": "Tejas Mk2",
+    "category": "Modernization",
+    "subcategory": "",
+    "summary": "A larger, more powerful evolution of the Tejas line with greater range and payload.",
+    "keywords": "tejas mk2 fighter",
+    "anchor": "modernization",
+    "panel": ""
+  },
+  {
+    "slug": "tedbf",
+    "title": "TEDBF",
+    "category": "Modernization",
+    "subcategory": "",
+    "summary": "A twin-engine deck-based fighter planned for future Indian aircraft carriers.",
+    "keywords": "tedbf twin engine deck based fighter navy",
+    "anchor": "modernization",
+    "panel": ""
+  },
+  {
+    "slug": "ghatak-ucav",
+    "title": "Ghatak UCAV",
+    "category": "Modernization",
+    "subcategory": "",
+    "summary": "An unmanned stealth combat aircraft concept under DRDO development.",
+    "keywords": "ghatak ucav stealth drone",
+    "anchor": "modernization",
+    "panel": ""
+  },
+  {
+    "slug": "cats-warrior",
+    "title": "CATS Warrior",
+    "category": "Modernization",
+    "subcategory": "",
+    "summary": "An unmanned \"loyal wingman\" drone designed to fly alongside manned fighters.",
+    "keywords": "cats warrior swarm drone loyal wingman",
+    "anchor": "modernization",
+    "panel": ""
+  },
+  {
+    "slug": "hypersonic-missiles",
+    "title": "Hypersonic Missiles",
+    "category": "Modernization",
+    "subcategory": "",
+    "summary": "Ongoing work on hypersonic glide vehicles to extend precision-strike reach.",
+    "keywords": "hypersonic missile brahmos",
+    "anchor": "modernization",
+    "panel": ""
+  },
+  {
+    "slug": "swarm-drones",
+    "title": "Swarm Drones",
+    "category": "Modernization",
+    "subcategory": "",
+    "summary": "Coordinated drone swarms for reconnaissance and loitering-munition strikes.",
+    "keywords": "swarm drones loitering munitions",
+    "anchor": "modernization",
+    "panel": ""
+  },
+  {
+    "slug": "agnipath-scheme",
+    "title": "Agnipath Scheme",
+    "category": "Modernization",
+    "subcategory": "",
+    "summary": "A short-service tour-based recruitment model introduced in 2022 across all three services.",
+    "keywords": "agniveer agnipath scheme recruitment reform",
+    "anchor": "modernization",
+    "panel": ""
+  },
+  {
+    "slug": "param-vir-chakra",
+    "title": "Param Vir Chakra",
+    "category": "Gallantry Awards",
+    "subcategory": "",
+    "summary": "India's highest military decoration for conspicuous bravery in the presence of the enemy — awarded 21 times since 1950.",
+    "keywords": "param vir chakra highest gallantry award",
+    "anchor": "awards",
+    "panel": ""
+  },
+  {
+    "slug": "maha-vir-chakra",
+    "title": "Maha Vir Chakra",
+    "category": "Gallantry Awards",
+    "subcategory": "",
+    "summary": "Awarded for acts of conspicuous gallantry in the presence of the enemy, on land, sea or air.",
+    "keywords": "maha vir chakra gallantry award",
+    "anchor": "awards",
+    "panel": ""
+  },
+  {
+    "slug": "vir-chakra",
+    "title": "Vir Chakra",
+    "category": "Gallantry Awards",
+    "subcategory": "",
+    "summary": "Recognises gallantry in battle, ranking just below the Maha Vir Chakra.",
+    "keywords": "vir chakra gallantry award",
+    "anchor": "awards",
+    "panel": ""
+  },
+  {
+    "slug": "ashoka-chakra",
+    "title": "Ashoka Chakra",
+    "category": "Gallantry Awards",
+    "subcategory": "",
+    "summary": "The peacetime equivalent of the Param Vir Chakra, for the most conspicuous bravery outside war.",
+    "keywords": "ashoka chakra peacetime gallantry award",
+    "anchor": "awards",
+    "panel": ""
+  },
+  {
+    "slug": "nda",
+    "title": "NDA",
+    "category": "Recruitment",
+    "subcategory": "",
+    "summary": "",
+    "keywords": "nda national defence academy entry 12th class",
+    "anchor": "recruitment",
+    "panel": ""
+  },
+  {
+    "slug": "cds",
+    "title": "CDS",
+    "category": "Recruitment",
+    "subcategory": "",
+    "summary": "",
+    "keywords": "cds combined defence services graduate entry",
+    "anchor": "recruitment",
+    "panel": ""
+  },
+  {
+    "slug": "afcat",
+    "title": "AFCAT",
+    "category": "Recruitment",
+    "subcategory": "",
+    "summary": "",
+    "keywords": "afcat air force common admission test",
+    "anchor": "recruitment",
+    "panel": ""
+  },
+  {
+    "slug": "agniveer-agnipath",
+    "title": "Agniveer (Agnipath)",
+    "category": "Recruitment",
+    "subcategory": "",
+    "summary": "",
+    "keywords": "agniveer agnipath short service tour class 10 12",
+    "anchor": "recruitment",
+    "panel": ""
+  },
+  {
+    "slug": "technical-entry-scheme",
+    "title": "Technical Entry Scheme",
+    "category": "Recruitment",
+    "subcategory": "",
+    "summary": "",
+    "keywords": "tes technical entry scheme 12th pcm",
+    "anchor": "recruitment",
+    "panel": ""
+  },
+  {
+    "slug": "jag-entry",
+    "title": "JAG Entry",
+    "category": "Recruitment",
+    "subcategory": "",
+    "summary": "",
+    "keywords": "jag judge advocate general law entry",
+    "anchor": "recruitment",
+    "panel": ""
+  }
+]

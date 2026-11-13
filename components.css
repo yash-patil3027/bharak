@@ -1,0 +1,96 @@
+/* components.css - NEW styles used by index.html AND every sub-page.
+   Uses the same CSS variables as the existing theme, so dark/light mode just works. */
+
+/* Anchored sections must not hide under the sticky nav (68px) + jump bar (~52px). */
+html{scroll-padding-top:128px;}
+
+/* ---------- Jump bar (category buttons) ---------- */
+.jumpbar{
+  position:sticky;top:68px;z-index:70;
+  background:var(--bg-2);border-bottom:1px solid var(--line);
+}
+.jumpbar .container{display:flex;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px;}
+.jumplabel{font-family:var(--mono);font-size:11px;color:var(--text-faint);letter-spacing:.1em;white-space:nowrap;}
+.jumplist{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0;flex:1;}
+.jumplist::-webkit-scrollbar{display:none;}
+.jumpbtn{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--tactical);font-weight:600;font-size:14px;
+  padding:7px 14px;border:1px solid var(--line);background:var(--panel);color:var(--text-dim);
+  border-radius:var(--radius);transition:border-color .2s,color .2s,background .2s;
+}
+.jumpbtn:hover{border-color:var(--sky);color:var(--text);}
+.jumpbtn .ct{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);}
+.jumpbtn[aria-current="page"]{border-color:var(--red);color:var(--text);background:var(--panel-2);}
+.jumpbtn.all{border-color:var(--red);color:#fff;background:var(--red-dim);}
+.jumpbtn.all:hover{background:var(--red);}
+@media (max-width:620px){.jumplabel{display:none;}}
+
+/* ---------- Back-to-top floating button ---------- */
+.totop{
+  position:fixed;right:20px;bottom:20px;z-index:90;width:44px;height:44px;
+  background:var(--red);color:#fff;border:0;border-radius:var(--radius);cursor:pointer;font-size:18px;
+  opacity:0;pointer-events:none;transition:opacity .25s;box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+.totop.show{opacity:1;pointer-events:auto;}
+
+/* ---------- Visit counter (footer) ---------- */
+.visits{font-family:var(--mono);font-size:11px;color:#a9b6c6;letter-spacing:.08em;}
+.visits b{color:#fff;font-size:13px;margin-left:4px;}
+
+/* ---------- Sub-page shell ---------- */
+.pagehead{padding:56px 0 34px;border-bottom:1px solid var(--line);
+  background:radial-gradient(circle at 85% 0%,rgba(93,173,226,.12),transparent 45%),linear-gradient(180deg,var(--navy-deep),var(--bg));}
+.pagehead h1{font-size:clamp(32px,4.4vw,52px);color:#fff;text-transform:uppercase;line-height:1.05;}
+.pagehead p{color:var(--text-dim);max-width:620px;margin:14px 0 0;}
+.crumbs{font-family:var(--mono);font-size:11px;color:var(--text-faint);margin-bottom:16px;}
+.crumbs a{color:var(--sky);}
+main.page{padding:48px 0 80px;min-height:50vh;}
+.group{margin-bottom:44px;}
+.group h2{font-family:var(--tactical);font-size:21px;color:#fff;margin-bottom:16px;padding-bottom:8px;border-bottom:1px dashed var(--line);}
+.card a.more{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--sky);letter-spacing:.06em;}
+.card a.more:hover{color:#fff;}
+.status{color:var(--text-faint);font-size:14px;padding:20px 0;}
+.status.err{color:#ff8a8a;}
+
+/* ---------- Entry list page ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:22px;}
+.filters input[type=search]{
+  flex:1 1 260px;background:var(--panel);border:1px solid var(--line);color:var(--text);
+  padding:12px 14px;font-family:var(--body);font-size:15px;border-radius:var(--radius);
+}
+.filters select{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:12px;font-family:var(--body);border-radius:var(--radius);}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.pill{font-family:var(--tactical);font-weight:600;font-size:14px;padding:6px 14px;border:1px solid var(--line);
+  background:transparent;color:var(--text-dim);cursor:pointer;border-radius:var(--radius);}
+.pill:hover{border-color:var(--sky);color:var(--text);}
+.pill.on{border-color:var(--red);background:var(--panel-2);color:#fff;}
+.resultcount{font-family:var(--mono);font-size:12px;color:var(--text-faint);margin-bottom:12px;}
+.entrylist{border:1px solid var(--line);background:var(--panel);}
+.entryrow{display:grid;grid-template-columns:minmax(0,1.3fr) 150px minmax(0,2fr);gap:18px;padding:14px 18px;border-bottom:1px solid var(--line);align-items:baseline;}
+.entryrow:last-child{border-bottom:0;}
+.entryrow:hover{background:var(--panel-2);}
+.entryrow .t{font-family:var(--tactical);font-weight:700;font-size:17px;color:#fff;}
+.entryrow .t:hover{color:var(--sky);}
+.entryrow .c{font-family:var(--mono);font-size:11px;color:var(--sky);letter-spacing:.05em;text-transform:uppercase;}
+.entryrow .s{font-size:13.5px;color:var(--text-dim);}
+.entryrow.head{background:var(--panel-2);font-family:var(--mono);font-size:11px;color:var(--text-faint);text-transform:uppercase;letter-spacing:.08em;}
+@media (max-width:760px){
+  .entryrow{grid-template-columns:1fr;gap:4px;}
+  .entryrow.head{display:none;}
+}
+mark{background:rgba(193,18,31,.35);color:inherit;padding:0 2px;}
+
+/* ---------- Entry detail page ---------- */
+.detail{max-width:760px;}
+.detail .meta{font-family:var(--mono);font-size:12px;color:var(--sky);margin:0 0 18px;text-transform:uppercase;letter-spacing:.06em;}
+.detail p{color:var(--text-dim);font-size:16px;}
+.detail .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+.related{margin-top:40px;}
+.related h2{font-family:var(--tactical);font-size:18px;color:#fff;margin-bottom:12px;}
+.related a{display:inline-block;margin:0 8px 8px 0;padding:6px 12px;border:1px solid var(--line);background:var(--panel);font-size:13px;color:var(--text-dim);}
+.related a:hover{border-color:var(--sky);color:var(--text);}
+
+/* ---------- Nav fit fix: 8 links must not wrap onto two lines ---------- */
+.navlinks a{white-space:nowrap;}
+@media (min-width:921px) and (max-width:1240px){.navlinks{gap:16px;}.navlinks a{font-size:14px;}}
